@@ -2,10 +2,6 @@ from sqlalchemy import Column, Table
 from sqlalchemy.sql.sqltypes import Integer, String, Date, Float
 from config.db import meta, engine
 
-users = Table('users', meta,Column('id', Integer, primary_key=True),
-                            Column('name', String(255)),Column('email', String(255)),
-                            Column('password', String(255)))
-
 circuits = Table( 'circuits', meta,
     Column('IdCircuito', Integer),
     Column('Ciudad', String(50)),

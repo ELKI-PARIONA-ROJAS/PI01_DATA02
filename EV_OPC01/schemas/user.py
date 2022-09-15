@@ -2,11 +2,8 @@ from datetime import date
 from pydantic import BaseModel
 from typing import Optional
 
-class User(BaseModel):
-    id: Optional[str]
-    name: str
-    email: str
-    password: str
+
+# la siguiente clase debe cargar los datos de la tabla circuits de la database api
 
 class Circuit(BaseModel):
     IdCircuito: Optional[int]
