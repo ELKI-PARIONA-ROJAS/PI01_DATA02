@@ -20,7 +20,7 @@ def get_circuits():
 
 @user.get("/circuits/{id}", response_model=Circuit, tags=["users"])
 def get_circuits(id: int):
-    return conn.execute(circuits.select().where(users.c.id == id)).first()
+    return conn.execute(circuits.select().where(circuits.c.id == id)).first()
 
 @user.get("/constructors", response_model=List[Constructor], tags=["users"])
 def get_constructors():
